@@ -1,5 +1,6 @@
 class Solution:
     def specialArray(self, nums: List[int]) -> int:
+        # Brute Force Solution
         # for x in range(1, len(nums) + 1):
         #     c = 0
         #     for i in nums:
@@ -9,6 +10,7 @@ class Solution:
         #         return x
         # return -1
 
+        # Binary Search Solution
         nums.sort()
         N = len(nums)
         for x in range(1, N + 1):
@@ -24,7 +26,4 @@ class Solution:
                     low = mid+1 
             if N - index == x:
                 return x
-
-
-
         return -1
