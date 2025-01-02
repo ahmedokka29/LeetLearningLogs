@@ -4,21 +4,19 @@ class Solution:
         prefix_sum = [0] * len(words)
         vowels = {"a", "e", "i", "o", "u"}
         s = 0
-        for i , q in enumerate(words):
+        for i, q in enumerate(words):
             if q[0] in vowels and q[-1] in vowels:
-                s+=1
+                s += 1
             prefix_sum[i] = s
-        
+
         print(prefix_sum)
         for i in range(len(queries)):
-            if queries[i][0] == 0 :
+            if queries[i][0] == 0:
                 ans[i] = prefix_sum[queries[i][1]]
             else:
-                ans[i] = prefix_sum[queries[i][1]] - prefix_sum[queries[i][0]-1]
+                ans[i] = prefix_sum[queries[i][1]] - prefix_sum[queries[i][0] - 1]
 
         return ans
-                
-
 
         # Brute Force - Time Limit Exceeded
         # ans = [0] * len(queries)
