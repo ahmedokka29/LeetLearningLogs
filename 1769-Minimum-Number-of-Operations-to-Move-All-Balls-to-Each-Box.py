@@ -46,8 +46,7 @@ class Solution:
             if boxes[i] == '1':
                 right_balls += 1
             right_ops += right_balls
-        print(right_balls)
-        print(right_ops)        
+       
         # 110
         # i = 2
         # ans[2] = 3
