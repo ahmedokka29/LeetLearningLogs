@@ -18,6 +18,9 @@ class Solution:
         if n % 2 != 0:
             return False
         
+        if (locked[0] == "1" and s[0] == ")") or (locked[-1] == "1" and s[-1] == "("):
+            return False 
+        
         min_open = 0
         max_open = 0
         
